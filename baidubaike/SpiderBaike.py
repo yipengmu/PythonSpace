@@ -33,11 +33,11 @@ class SpiderBaike(object):
                 new_url = self.urls.get_new_url()
 
                 print 'start download .... new_url= ' + new_url
-                print("craw %d : %s" %(count, new_url))
+                # print("craw %d : %s" %(count, new_url))
 
                 html_cont = self.downloader.download(new_url)
 
-                print "result = " + html_cont
+                # print "result = " + html_cont
                 new_urls, new_data = self.hParser.start_parser(new_url, html_cont)
 
                 self.urls.add_new_urls(new_urls)

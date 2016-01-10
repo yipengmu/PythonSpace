@@ -16,7 +16,7 @@ class HtmlParser(object):
 
         findout_new_urls = set()
 
-        links = soup.find_all('a',href=re.compile(".htm"))
+        links = soup.find_all('a',href=re.compile("/view/"))
 
         for link in links:
             new_url = link['href']
